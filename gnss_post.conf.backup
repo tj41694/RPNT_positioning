@@ -1,0 +1,155 @@
+# GNSS basic option --------------------------------------------------------------------------------------------------------
+gnss-posmode                =ppp-kin        # (0:spp,1:ppp-kin,2:ppp-sta,3:ppp-fix,4:dgps,5:rtk-kin,6:rtk-sta,7:rtk-fix,8:movingbase)
+gnss-pppmode                =un-diff        # (0:un-diff,1:single-diff)
+gnss-frequency              =double         # (1:single,2:double,3:triple)
+gnss-freqPriority           =on             # set used frequencies according to priority (0:off,1:on)
+gnss-soltype                =forward        # (0:forward,1:backward,2:combined)
+gnss-elmask                 =15             # (deg)
+gnss-con_weight_el          =90             # minimum elevation to use const weight for pseudorange (deg)
+
+gnss-snrmask_r              =off            # (0:off,1:on)
+gnss-snrmask_b              =off            # (0:off,1:on)
+gnss-snrmask_F1             =1,0,0,0,0,0,0,0,0
+gnss-snrmask_F2             =2,0,0,0,0,0,0,0,0
+gnss-snrmask_F3             =3,0,0,0,0,0,0,0,0
+
+gnss-dynamics               =off            # (0:off,1:on)
+
+gnss-tidecorr               =1              # (0:off+1:solid+2:otl+4:pole)
+gnss-sppiono                =ion-free       # (0:off,1:brdc,2:sbas,3:ion-free,5:ionex-tec,6:qzs-brdc,7:qzs-lex)
+gnss-ionoopt                =ion-free       # (0:off,1:brdc,2:sbas,3:ion-free,4:constrain,5:ionex-tec,6:qzs-brdc,7:qzs-lex)
+gnss-spptrop                =saas           # (0:off,1:saas,2:sbas,5:ztd-file)
+gnss-tropopt                =est-ztd        # (0:off,1:saas,2:sbas,3:est-ztd,4:est-ztdgrad,5:ztd-file)
+gnss-sateph                 =precise        # (0:brdc,1:precise,2:brdc+sbas,3:brdc+ssrapc,4:brdc+ssrcom)
+gnss-posopt1                =on             # (0:off,1:on : receiver PCV)
+gnss-posopt2                =on             # (0:off,1:on : phase windup for PPP)
+gnss-posopt3                =off            # (0:off,1:on : exclude GPS Block IIA satellite in eclipse for PPP)
+gnss-exclsats               =               # exclude satellites with PRN (e.g. G01,R11,E22,C33,...)
+gnss-bds_gen                =3              # (1:BDS-2 + 2:BDS-3)
+gnss-bds_orbit              =3              # BDS orbit (1:MEO + 2:IGSO + 4:GEO)
+gnss-navsys                 =5              # (1:gps + 2:glo + 4:gal + 8:bds + 16:qzs + 32:irn + 64:sbas)
+gnss-freq_glo               =               # GLONASS freqeucny priority (e.g. 1,2,3,4,6)
+gnss-freq_gal               =               # Galileo freqeucny priority (e.g. 1,5,6,7,8)
+gnss-freq_bds3              =2,6               # BDS-3 freqeucny priority (e.g. 2,6,7,5,8,1)
+gnss-freq_bds2              =2,6               # BDS-2 freqeucny priority (e.g. 2,6,7,5,8,1)
+gnss-logmsg                 =17             # (0:off + 1:nsat + 2:pdop + 4:snr + 8:multi-path + 16:exc-sat + 32:helmert)
+
+proc-armode                 =continuous     # (0:off,1:continuous,2:instantaneous,3:fix-and-hold,4:LC_WN)
+proc-order                  =3              # order of polynomial fitting of L to detect cycle-slip, recommend: 3-5
+proc-slipmode               =6              # (0:obs + 1:CP + 2:geo-free + 4:Melbourne-Wubbena)
+proc-slipstd                =10             # std variance of repaired cycle slip, recommend: 1-30 (m)
+proc-cs_gf                  =0.02           # geo-free threshold, recommend: 0.02-0.15 (m)
+proc-cs_mw                  =2              # (m)
+proc-sampling               =1              # observation time sampling (s)
+proc-minConse               =3              # minimum consecutive number to use satellite when samping <= 15
+proc-restime                =1.5            # min lock time gap to reset ambiguity (s)
+proc-gloarmode              =auto           # (0:off,1:on,2:auto)
+proc-bdsarmode              =off            # (0:off,1:on)
+proc-arthres                =2.0
+proc-iniar                  =1              # initialize ambiguity if lock count < iniar
+proc-minelarfix             =30             # minimum elevation to fix ambiguity (deg)
+proc-minelarhold            =0              # minimum elevation to hold ambiguity (deg)
+proc-maxariter              =1              # max iteration to resolve ambiguity
+proc-maxage                 =30             # (s)
+proc-syncsol                =off            # (0:off,1:on)
+proc-maxres                 =10.0           # (m)
+proc-adjust                 =kalman         # (0:lsa,1:kalman,2:helmert)
+proc-adjust-robust          =none           # robust mode for adjustment (0:none,1:IGG3-2,2:IGG3-3)
+proc-robust-covar           =var            # covariance type in robust function (0:var,1:covar,2:vector)
+proc-niter                  =1
+proc-baselen                =0.0            # (m)
+proc-basesig                =0.1            # (m)
+proc-baseatt                =off            # (0:off,1:on)
+
+stats-pppfactor             =3              # PPP observation noise factor "ppp_noise (m) = pppfactor x obs_noise (m)", recommend: 3
+stats-errcode               =1              # code noise, recommend: 0.5-2 (m)
+stats-errcodeel             =1              # code elevation dependent noise, recommend: 0.5-2 (m)
+stats-errphase              =0.005          # phase noise, recommend: 0.003-0.05 (m)
+stats-errphaseel            =0              # phase elevation dependent noise, recommend: 0 (m)
+stats-errphasebl            =0              # (m/10km)
+stats-errdoppler            =1              # (Hz)
+stats-ISBmode               =randomWalk     # receiver ISB mode (0:whiteNoise,1:randomWalk)
+stats-stdambs               =10             # initial average ambguity std, recommend: 1->30 (m)
+stats-stdiono               =20             # initial ion model coefficient std.,recommend: 10->30 (m)
+stats-stdtrop               =0.3            # initial tro model ZTD std.: 0.2 -0.5 (m)
+stats-ratambs               =0              # growth rate of ambiguity std, recommend: 0 (m^2/s)
+stats-rationo               =1e-6           # growth rate of ion model std, recommend: 1e-6->5e-6 (m^2/s)
+stats-rattrop               =2e-8           # growth rate of tro model (ZTD) std, recommend: 1e-8->3e-8 (m^2/s)
+stats-ratrISB               =0              # growth rate of receiver ISB std, recommend: 0->1e-6 (m^2/s)
+stats-clkstab               =5e-11          # satellite clock stability, recommend: 0->5e-11 (s/s)
+
+rover-postype               =xyz            # (0:llh,1:xyz,2:single,3:posfile,4:snxfile,5:rinexhead,6:rtcm)
+rover-pos1                  =-2752836.0968  # (deg|m)
+rover-pos2                  =-1533596.1502  # (deg|m)
+rover-pos3                  = 5526823.2249  # (m|m)
+base-postype                =xyz            # (0:llh,1:xyz,2:single,3:posfile,4:snxfile,5:rinexhead,6:rtcm)
+base-pos1                   =-2308441.1380  # (deg|m)
+base-pos2                   = 4396028.1618  # (deg|m)
+base-pos3                   = 3989907.0282  # (m|m)
+base-maxaveep               =0              # 
+
+out1-solformat              =xyz            # (0:llh,1:xyz,2:enu,3:nmea)
+out1-refstation             =base           # eun reference station (0:base,1:rover)
+out1-outhead                =on             # (0:off,1:on)
+out1-outopt                 =on             # (0:off,1:on)
+out1-timesys                =gpst           # (0:gpst,1:utc,2:bdst)
+out1-timeform               =hms            # (0:tow,1:hms)
+out1-timendec               =3
+out1-degform                =deg            # (0:deg,1:dms)
+out1-datum                  =WGS84          # (0:WGS84,1:CGCS2000)
+out1-height                 =ellipsoidal    # (0:ellipsoidal,1:geodetic)
+out1-geoid                  =gsi2000        # (0:internal,1:egm96,2:egm08_2.5,3:egm08_1,4:gsi2000)
+out1-solstatic              =all            # (0:all,1:single)
+out1-nmeaintv1              =0              # (s)
+out1-nmeaintv2              =0              # (s)
+out1-outstat                =off            # (0:off,1:state,2:residual)
+
+out2-solformat              =enu            # (0:llh,1:xyz,2:enu,3:nmea)
+out2-refstation             =base           # eun reference station (0:base,1:rover)
+out2-outhead                =on             # (0:off,1:on)
+out2-outopt                 =on             # (0:off,1:on)
+out2-timesys                =gpst           # (0:gpst,1:utc,2:bdst)
+out2-timeform               =hms            # (0:tow,1:hms)
+out2-timendec               =3
+out2-degform                =deg            # (0:deg,1:dms)
+out2-datum                  =WGS84          # (0:WGS84,1:CGCS2000)
+out2-height                 =ellipsoidal    # (0:ellipsoidal,1:geodetic)
+out2-geoid                  =gsi2000        # (0:internal,1:egm96,2:egm08_2.5,3:egm08_1,4:gsi2000)
+out2-solstatic              =all            # (0:all,1:single)
+out2-nmeaintv1              =0              # (s)
+out2-nmeaintv2              =0              # (s)
+out2-outstat                =off            # (0:off,1:state,2:residual)
+
+misc-timeinterp             =off            # (0:off,1:on)
+misc-sbasatsel              =0              # (0:all)
+misc-rnxopt1                =
+misc-rnxopt2                =
+
+file-satantfile             =D:\date\GNSS\igs14_2196.atx
+file-rcvantfile             =D:\date\GNSS\igs14_2196.atx
+file-staposfile             =
+file-geoidfile              =
+file-ionofile               =
+file-ztdfile                =
+file-dcbfile                =D:\date\GNSS\CAS0MGXRAP_20220310000_01D_01D_OSB.BIA
+file-erpfile                =
+file-blqfile                =
+file-snxfile                =
+file-tempdir                =
+file-geexefile              =
+file-solstatfile            =
+file-testfile               =D:\date\GNSS\out\test.log
+
+# GNSS post option 
+post-predict                =0              # (1: only observed + 2: only predicted + 4: not combined)
+post-timeinter              =1
+post-timestart              =
+post-timeend                =
+post-timeskip               =               # skipped time (e.g. yyyy mm dd hh mm ss-yyyy mm dd hh mm ss, yyyy mm dd hh mm ss-yyyy mm dd hh mm ss )
+post-roverobs               =D:\date\GNSS\obs\AC230310.22o
+post-baseobs                =
+post-navigation             =D:\date\GNSS\precise\brdm0310.22n
+post-preciseeph             =D:\date\GNSS\precise\COM21951.sp3 
+post-satclock               =D:\date\GNSS\precise\COM21951.CLK
+post-output1                =D:\date\GNSS\out\out1
+post-output2                =D:\date\GNSS\out\out2

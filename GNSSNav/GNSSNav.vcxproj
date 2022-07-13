@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Adjustment\adjustment.cpp" />
+    <ClCompile Include="..\src\BaseFunction\basefunction.cpp" />
+    <ClCompile Include="..\src\BaseFunction\timesys.cpp" />
+    <ClCompile Include="..\src\ConfigFile\config.cpp" />
+    <ClCompile Include="..\src\Decode\decode.cpp" />
+    <ClCompile Include="..\src\Decode\raw.cpp" />
+    <ClCompile Include="..\src\Decode\raw\binex.cpp" />
+    <ClCompile Include="..\src\Decode\raw\cmr.cpp" />
+    <ClCompile Include="..\src\Decode\raw\crescent.cpp" />
+    <ClCompile Include="..\src\Decode\raw\gw10.cpp" />
+    <ClCompile Include="..\src\Decode\raw\javad.cpp" />
+    <ClCompile Include="..\src\Decode\raw\novatel.cpp" />
+    <ClCompile Include="..\src\Decode\raw\nvs.cpp" />
+    <ClCompile Include="..\src\Decode\raw\septentrio.cpp" />
+    <ClCompile Include="..\src\Decode\raw\skytraq.cpp" />
+    <ClCompile Include="..\src\Decode\raw\superstar2.cpp" />
+    <ClCompile Include="..\src\Decode\raw\trimble17.cpp" />
+    <ClCompile Include="..\src\Decode\raw\ublox.cpp" />
+    <ClCompile Include="..\src\Decode\rtcm.cpp" />
+    <ClCompile Include="..\src\GNSS\AmbModel\ambiguity.cpp" />
+    <ClCompile Include="..\src\GNSS\AntModel\antenna.cpp" />
+    <ClCompile Include="..\src\GNSS\DataClass\data.cpp" />
+    <ClCompile Include="..\src\GNSS\DataClass\lexmsg.cpp" />
+    <ClCompile Include="..\src\GNSS\DataClass\sbsmsg.cpp" />
+    <ClCompile Include="..\src\GNSS\DataClass\sbssat.cpp" />
+    <ClCompile Include="..\src\GNSS\EphModel\satellite.cpp" />
+    <ClCompile Include="..\src\GNSS\IonModel\ionosphere.cpp" />
+    <ClCompile Include="..\src\GNSS\ParModel\parameter.cpp" />
+    <ClCompile Include="..\src\GNSS\PosModel\position.cpp" />
+    <ClCompile Include="..\src\GNSS\PosModel\ppp.cpp" />
+    <ClCompile Include="..\src\GNSS\PosModel\relative.cpp" />
+    <ClCompile Include="..\src\GNSS\postpro.cpp" />
+    <ClCompile Include="..\src\GNSS\gnss_pro.cpp" />
+    <ClCompile Include="..\src\GNSS\TidModel\tide.cpp" />
+    <ClCompile Include="..\src\GNSS\TroModel\troposphere.cpp" />
+    <ClCompile Include="..\src\InputFile\inputfile.cpp" />
+    <ClCompile Include="..\src\postmain.cpp" />
+    <ClCompile Include="..\src\RtkStream\stream.cpp" />
+    <ClCompile Include="..\src\RtkStream\streamsg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Adjustment\adjustment.h" />
+    <ClInclude Include="..\src\BaseFunction\basefunction.h" />
+    <ClInclude Include="..\src\BaseFunction\timesys.h" />
+    <ClInclude Include="..\src\ConfigFile\config.h" />
+    <ClInclude Include="..\src\Decode\decode.h" />
+    <ClInclude Include="..\src\Decode\raw.h" />
+    <ClInclude Include="..\src\Decode\raw\binex.h" />
+    <ClInclude Include="..\src\Decode\raw\cmr.h" />
+    <ClInclude Include="..\src\Decode\raw\crescent.h" />
+    <ClInclude Include="..\src\Decode\raw\gw10.h" />
+    <ClInclude Include="..\src\Decode\raw\javad.h" />
+    <ClInclude Include="..\src\Decode\raw\novatel.h" />
+    <ClInclude Include="..\src\Decode\raw\nvs.h" />
+    <ClInclude Include="..\src\Decode\raw\septentrio.h" />
+    <ClInclude Include="..\src\Decode\raw\skytraq.h" />
+    <ClInclude Include="..\src\Decode\raw\superstar2.h" />
+    <ClInclude Include="..\src\Decode\raw\trimble17.h" />
+    <ClInclude Include="..\src\Decode\raw\ublox.h" />
+    <ClInclude Include="..\src\Decode\rtcm.h" />
+    <ClInclude Include="..\src\GNSS\AmbModel\ambiguity.h" />
+    <ClInclude Include="..\src\GNSS\AntModel\antenna.h" />
+    <ClInclude Include="..\src\GNSS\DataClass\data.h" />
+    <ClInclude Include="..\src\GNSS\EphModel\satellite.h" />
+    <ClInclude Include="..\src\GNSS\IonModel\ionosphere.h" />
+    <ClInclude Include="..\src\GNSS\ParModel\parameter.h" />
+    <ClInclude Include="..\src\GNSS\PosModel\position.h" />
+    <ClInclude Include="..\src\GNSS\gnss_pro.h" />
+    <ClInclude Include="..\src\GNSS\TidModel\tide.h" />
+    <ClInclude Include="..\src\GNSS\TroModel\troposphere.h" />
+    <ClInclude Include="..\src\InputFile\inputfile.h" />
+    <ClInclude Include="..\src\gnssnav_lib.h" />
+    <ClInclude Include="..\src\gnssnav_const.h" />
+    <ClInclude Include="..\src\RtkStream\stream.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C3700027-57E1-4B84-9881-B6F91544AFEF}</ProjectGuid>
+    <RootNamespace>GNSSNav</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>GNSSNav</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+    <PreferredToolArchitecture>
+    </PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)\..\src;C:\Program Files (x86)\Microsoft SDKs\MPI\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\OBJ</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\OBJ</IntDir>
+    <IncludePath>$(ProjectDir)\..\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;MPICH_SKIP_MPICXX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>msmpi.lib;msmpifec.lib;msmpifmc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <HeapReserveSize>10485760</HeapReserveSize>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>
+      </BasicRuntimeChecks>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
