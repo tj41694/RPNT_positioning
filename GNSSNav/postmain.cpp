@@ -6,7 +6,7 @@
 
 int main(int argc,char* argv[]) {
     int prd_Days=1;
-    str2int(argv[1],prd_Days);
+    str2int(argv[2],prd_Days);
 
     all_option_c option;
     if (!option.readpostopt(argv[1])) return 0;
