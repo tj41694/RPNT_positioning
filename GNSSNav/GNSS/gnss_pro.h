@@ -461,13 +461,13 @@ protected:
     in_gnss_eph_c readEph;              /* read precise ephemeris stream */
     in_gnss_rnxC_c readC;               /* read precise clock file stream */
 public:
-    gnss_pro_c *gnss_pro;               /* GNSS process class */
+    gnss_pro_c *gnss_pro = nullptr;     /* GNSS process class */
     /* GNSS options */
-    gnss_prcopt_c *prcopt;              /* GNSS processing options */
-    gnss_pstopt_c *pstopt;              /* GNSS post-procssing options */
+    gnss_prcopt_c *prcopt = nullptr;    /* GNSS processing options */
+    gnss_pstopt_c *pstopt = nullptr;    /* GNSS post-procssing options */
     gnss_solopt_c solopt[2];            /* GNSS solution options */
     /* GNSS data */
-    gnss_nav_c *nav;                    /* navigation data */
+    gnss_nav_c *nav = nullptr;          /* navigation data */
 };
 
 /* ROTI process class ----------------------------------------------------------------------------- */

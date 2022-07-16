@@ -801,8 +801,8 @@ opt_t * all_option_c::searchopt(const string name,const opt_t *opts) {
 /* string to option value --------------------------------------------------------- */
 int all_option_c::str2opt(opt_t *opt,const string str) {
     switch (opt->format) {
-        case 0: *(int	 *)opt->var=stoi(str); break;
-        case 1: *(double *)opt->var=stold(str); break;
+        case 0: *(int	 *)opt->var=str.empty()?0:stoi(str); break;
+        case 1: *(double *)opt->var=str.empty()?0:stold(str); break;
         case 2: *(string *)opt->var=str; break;
         case 3: return str2enum(str,opt->comment,(int *)opt->var); break;
         default: return 0;

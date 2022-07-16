@@ -12,13 +12,34 @@
       "inheritEnvironments": [ "linux_x64" ],
       "intelliSenseMode": "linux-gcc-x64",
       "remoteMachineName": "2050790112;192.168.31.39 (username=tangjia, port=22, authentication=Password)",
-      "remoteCMakeListsRoot": "$HOME/project/${projectDirName}/src",
+      "remoteCMakeListsRoot": "$HOME/projects/${projectDirName}",
       "remoteBuildRoot": "$HOME/projects/${projectDirName}/out/build/${name}",
       "remoteInstallRoot": "$HOME/projects/${projectDirName}/out/install/${name}",
       "remoteCopySources": true,
       "rsyncCommandArgs": "-t --delete --delete-excluded",
       "remoteCopyBuildOutput": false,
       "remoteCopySourcesMethod": "rsync"
+    },
+    {
+      "name": "Linux-GCC-Debug",
+      "generator": "Unix Makefiles",
+      "configurationType": "Debug",
+      "cmakeExecutable": "cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "intelliSenseMode": "linux-gcc-x64",
+      "remoteMachineName": "2050790112;192.168.31.39 (username=tangjia, port=22, authentication=Password)",
+      "remoteCMakeListsRoot": "$HOME/projects/${projectDirName}",
+      "remoteBuildRoot": "$HOME/projects/${projectDirName}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/projects/${projectDirName}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "variables": []
     }
   ]
 }
