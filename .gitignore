@@ -1,4 +1,6 @@
 GNSSNav/x64
+# CMakeOut
+/out
 
 # Prerequisites
 *.d
