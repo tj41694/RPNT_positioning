@@ -146,7 +146,7 @@ gtime_c *gtime_c::gpst2time(int week,double sss) {
 
     if (sss<-1E9||1E9<sss) sss=0.0;
     time+=(time_t)86400*7*week+(int)sss;
-    sec=(long long(sss*1E9)-long long(sss)*1E9)/1.E9;
+    sec=((long long)sss*1E9-(long long)sss*1E9)/1.E9;
 
     Gweek=week;
     Gws=sss;
@@ -178,7 +178,7 @@ gtime_c *gtime_c::gst2time(int week,double sss) {
 
     if (sss<-1E9||1E9<sss) sss=0.0;
     time+=(time_t)86400*7*week+(int)sss;
-    sec=(long long(sss*1E9)-long long(sss)*1E9)/1.E9;
+    sec=((long long)sss*1E9-(long long)sss*1E9)/1.E9;
 
     Eweek=week;
     Ews=sss;
@@ -210,7 +210,7 @@ gtime_c *gtime_c::bdt2time(int week,double sss) {
 
     if (sss<-1E9||1E9<sss) sss=0.0;
     time+=(time_t)86400*7*week+(int)sss;
-    sec=(long long(sss*1E9)-long long(sss)*1E9)/1.E9;
+    sec=((long long)sss*1E9-(long long)sss*1E9)/1.E9;
 
     Cweek=week;
     Cws=sss;
