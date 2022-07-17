@@ -31,6 +31,7 @@ include_directories ("./")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (GNSSNav ${SRC_FILES})
+
 target_link_libraries(GNSSNav ${CMAKE_THREAD_LIBS_INIT})
 
 # TODO: 如有需要，请添加测试并安装目标。
